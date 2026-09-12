@@ -1,0 +1,65 @@
+[
+  {
+    "screenshot": "05-site-home.png",
+    "url": "http://127.0.0.1:8083/",
+    "status": 200,
+    "body": "Lab 3 — Local Security Training\n\nIsolated fixture. All data are synthetic.\n\nAbout\nDownload",
+    "capturedAt": "2026-09-12T11:24:45.435Z"
+  },
+  {
+    "screenshot": "06-site-public-file.png",
+    "url": "http://127.0.0.1:8083/download?file=readme.txt",
+    "status": 200,
+    "body": "Public training document.\n",
+    "capturedAt": "2026-09-12T11:24:45.996Z"
+  },
+  {
+    "screenshot": "07-site-env.png",
+    "url": "http://127.0.0.1:8083/.env",
+    "status": 200,
+    "body": "APP_ENV=training\nDEMO_TOKEN=NOT_A_REAL_SECRET\n",
+    "capturedAt": "2026-09-12T11:24:46.545Z"
+  },
+  {
+    "screenshot": "08-site-backup.png",
+    "url": "http://127.0.0.1:8083/backup.sql",
+    "status": 200,
+    "body": "-- SYNTHETIC TRAINING BACKUP\nCREATE TABLE demo (id INTEGER);\n",
+    "capturedAt": "2026-09-12T11:24:47.095Z"
+  },
+  {
+    "screenshot": "09-site-config-backup.png",
+    "url": "http://127.0.0.1:8083/config.php.bak",
+    "status": 200,
+    "body": "<?php // TRAINING ONLY; no real credentials ?>",
+    "capturedAt": "2026-09-12T11:24:47.645Z"
+  },
+  {
+    "screenshot": "10-site-directory.png",
+    "url": "http://127.0.0.1:8083/uploads/",
+    "status": 200,
+    "body": "Index of /uploads/\ndemo.txt",
+    "capturedAt": "2026-09-12T11:24:48.196Z"
+  },
+  {
+    "screenshot": "11-site-admin.png",
+    "url": "http://127.0.0.1:8083/admin",
+    "status": 403,
+    "body": "Forbidden",
+    "capturedAt": "2026-09-12T11:24:48.745Z"
+  },
+  {
+    "screenshot": "12-site-not-found.png",
+    "url": "http://127.0.0.1:8083/config.php",
+    "status": 404,
+    "body": "Not found",
+    "capturedAt": "2026-09-12T11:24:49.313Z"
+  },
+  {
+    "screenshot": "13-site-robots.png",
+    "url": "http://127.0.0.1:8083/robots.txt",
+    "status": 200,
+    "body": "User-agent: *\nDisallow: /admin\n",
+    "capturedAt": "2026-09-12T11:24:49.862Z"
+  }
+]
