@@ -1,0 +1,49 @@
+site_name: Даниил Степанов
+site_description: Финансы, технологии и немного самоиронии. Персональный сайт Даниила Степанова.
+site_author: Даниил Степанов
+# site_url: добавьте фактический HTTPS-адрес после публикации
+use_directory_urls: false
+theme:
+  name: material
+  language: ru
+  font: false
+  logo: images/logo.svg
+  favicon: images/logo.svg
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.share
+    - content.code.copy
+nav:
+  - Главная: index.md
+  - О себе: about.md
+  - Проекты: projects.md
+  - Мемы: memes.md
+  - Достижения: achievements.md
+  - Резюме: resume.md
+  - Контакты: contacts.md
+plugins:
+  - search:
+      lang: [ru, en]
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+extra_css:
+  - stylesheets/extra.css
+extra:
+  generator: false
+copyright: © 2026 Даниил Степанов · Финансы с человеческим лицом
