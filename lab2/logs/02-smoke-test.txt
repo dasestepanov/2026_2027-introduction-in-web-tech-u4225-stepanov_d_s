@@ -45,4 +45,3 @@ $ docker logs lab2-20260912-flask
 172.17.0.1 - - [12/Sep/2026 10:50:49] "GET / HTTP/1.1" 200 -
 
 Exit code: 0
-

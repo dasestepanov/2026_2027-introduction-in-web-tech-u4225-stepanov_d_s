@@ -1,0 +1,13 @@
+Run: https://github.com/dasestepanov/2026_2027-introduction-in-web-tech-u4225-stepanov_d_s/actions/runs/34689599720
+
+build-and-push — failure
+Set up job — success
+Checkout code — success
+Set up Docker Buildx — success
+Check required secrets — failure
+Login to Docker Hub — skipped
+Build and push Docker image — skipped
+Deploy (simulation) — skipped
+Post Set up Docker Buildx — success
+Post Checkout code — success
+Complete job — success
