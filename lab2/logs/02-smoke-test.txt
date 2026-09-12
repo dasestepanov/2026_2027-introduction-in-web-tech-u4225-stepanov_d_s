@@ -1,0 +1,48 @@
+$ docker info --format Server={{.ServerVersion}} OS={{.OSType}} Arch={{.Architecture}}
+Server=29.6.1 OS=linux Arch=aarch64
+
+Exit code: 0
+
+$ curl --fail --retry 5 --retry-connrefused -i http://127.0.0.1:5002/
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 18
+Server: Werkzeug/2.0.3 Python/3.9.25
+Date: Sat, 12 Sep 2026 10:50:49 GMT
+
+Hello from Docker!  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100    18  100    18    0     0   5080      0 --:--:-- --:--:-- --:--:--  6000
+
+Exit code: 0
+
+$ docker exec lab2-20260912-flask id
+uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+
+Exit code: 0
+
+$ docker exec lab2-20260912-flask pip check
+No broken requirements found.
+
+Exit code: 0
+
+$ docker image inspect my-flask-app:lab2-20260912 --format User={{.Config.User}} Workdir={{.Config.WorkingDir}} Architecture={{.Architecture}}
+User=appuser Workdir=/app Architecture=arm64
+
+Exit code: 0
+
+$ docker logs lab2-20260912-flask
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.2:5000/ (Press CTRL+C to quit)
+172.17.0.1 - - [12/Sep/2026 10:50:49] "GET / HTTP/1.1" 200 -
+
+Exit code: 0
+
