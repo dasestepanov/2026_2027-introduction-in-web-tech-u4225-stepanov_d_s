@@ -1,0 +1,12 @@
+$ curl --path-as-is --max-time 10 -sS -i http://127.0.0.1:8083/backup.sql
+
+HTTP/1.0 200 OK
+Server: LabTraining/1.0 
+Date: Sat, 12 Sep 2026 10:58:08 GMT
+Content-Type: text/plain
+Content-Length: 61
+
+-- SYNTHETIC TRAINING BACKUP
+CREATE TABLE demo (id INTEGER);
+
+[exit code: 0]

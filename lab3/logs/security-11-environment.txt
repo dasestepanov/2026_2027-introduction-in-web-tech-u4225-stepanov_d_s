@@ -1,0 +1,12 @@
+$ curl --path-as-is --max-time 10 -sS -i http://127.0.0.1:8083/.env
+
+HTTP/1.0 200 OK
+Server: LabTraining/1.0 
+Date: Sat, 12 Sep 2026 10:58:08 GMT
+Content-Type: text/plain
+Content-Length: 46
+
+APP_ENV=training
+DEMO_TOKEN=NOT_A_REAL_SECRET
+
+[exit code: 0]

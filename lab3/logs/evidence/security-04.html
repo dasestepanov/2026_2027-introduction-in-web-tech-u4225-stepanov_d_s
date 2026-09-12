@@ -1,0 +1,43 @@
+<meta charset="utf-8"><style>body{margin:32px;background:#f0f3f8;color:#172338;font:17px Arial}h1{font-size:27px;margin-bottom:8px}p{color:#516078}section{background:white;border:1px solid #cbd4e0;border-radius:10px;margin:14px 0;padding:16px}h2{font-size:18px;margin:0 0 10px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.45 Menlo,monospace;margin:0}</style><h1>HTTP-проверки 13–16</h1><p>Лабораторная №3 • Степанов Д. С. • 12.09.2026<br>Представление сохранённых протоколов реальных команд; исходные TXT находятся в logs/.</p><section><h2>security-13-backup.txt</h2><pre>$ curl --path-as-is --max-time 10 -sS -i http://127.0.0.1:8083/backup.sql
+
+HTTP/1.0 200 OK
+Server: LabTraining/1.0 
+Date: Sat, 12 Sep 2026 10:58:08 GMT
+Content-Type: text/plain
+Content-Length: 61
+
+-- SYNTHETIC TRAINING BACKUP
+CREATE TABLE demo (id INTEGER);
+
+[exit code: 0]
+</pre></section><section><h2>security-14-bak.txt</h2><pre>$ curl --path-as-is --max-time 10 -sS -i http://127.0.0.1:8083/config.php.bak
+
+HTTP/1.0 200 OK
+Server: LabTraining/1.0 
+Date: Sat, 12 Sep 2026 10:58:08 GMT
+Content-Type: text/plain
+Content-Length: 46
+
+&lt;?php // TRAINING ONLY; no real credentials ?&gt;
+[exit code: 0]
+</pre></section><section><h2>security-15-old.txt</h2><pre>$ curl --path-as-is --max-time 10 -sS -i http://127.0.0.1:8083/index.php.old
+
+HTTP/1.0 404 Not Found
+Server: LabTraining/1.0 
+Date: Sat, 12 Sep 2026 10:58:08 GMT
+Content-Type: text/plain
+Content-Length: 9
+
+Not found
+[exit code: 0]
+</pre></section><section><h2>security-16-backup-extension.txt</h2><pre>$ curl --path-as-is --max-time 10 -sS -i http://127.0.0.1:8083/site.backup
+
+HTTP/1.0 404 Not Found
+Server: LabTraining/1.0 
+Date: Sat, 12 Sep 2026 10:58:08 GMT
+Content-Type: text/plain
+Content-Length: 9
+
+Not found
+[exit code: 0]
+</pre></section>

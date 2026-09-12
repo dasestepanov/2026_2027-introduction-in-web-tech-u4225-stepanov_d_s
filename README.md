@@ -1,10 +1,12 @@
-# Лабораторная работа №2 — CI/CD Docker
+# Лабораторные работы — введение в веб-технологии
 
 Степанов Даниил Сергеевич, U4225, 2026/2027. GitHub: [dasestepanov](https://github.com/dasestepanov).
 
 Автоматическая сборка и публикация Flask-приложения из лабораторной №1 через GitHub Actions. Деплой реализован сообщением `echo`, как разрешено заданием.
 
-- [Отчёт](lab2/lab2_report.md)
+- [Лабораторная №2 — CI/CD](lab2/lab2_report.md)
+- [Лабораторная №3 — мониторинг и безопасность](lab3/lab3_report.md)
+- [Конфигурация стенда №3](lab3/compose.yaml)
 - [Пайплайн](.github/workflows/docker-build.yml)
 - [Протоколы локальных проверок](lab2/logs/)
 - [Исходная лабораторная №1](https://github.com/dasestepanov/devops-lab-stepanov/tree/main/lab1)

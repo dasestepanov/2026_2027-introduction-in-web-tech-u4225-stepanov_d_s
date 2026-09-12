@@ -1,0 +1,26 @@
+$ docker compose config --quiet
+
+[exit code: 0]
+
+$ docker compose exec -T prometheus promtool check config /etc/prometheus/prometheus.yml
+Checking /etc/prometheus/prometheus.yml
+ SUCCESS: /etc/prometheus/prometheus.yml is valid prometheus config file syntax
+
+
+[exit code: 0]
+
+$ python3 scripts/check_monitoring.py
+PASS: 2/2 targets UP; Grafana database OK; data source OK; 4 panels / 5 PromQL queries contain data.
+CPU usage (%) series: 1
+Memory used (%) series: 1
+Disk read / write (bytes/s) series: 2
+Disk read / write (bytes/s) series: 2
+CPU cumulative time (seconds) series: 10
+
+[exit code: 0]
+
+$ curl --fail -sS http://127.0.0.1:9090/-/ready
+Prometheus Server is Ready.
+
+[exit code: 0]
+

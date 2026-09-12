@@ -1,0 +1,10 @@
+$ curl --path-as-is --max-time 10 -sS -i http://127.0.0.1:8083/
+
+HTTP/1.0 200 OK
+Server: LabTraining/1.0 
+Date: Sat, 12 Sep 2026 10:58:08 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 191
+
+<h1>Lab 3 — Local Security Training</h1><p>Isolated fixture. All data are synthetic.</p><ul><li><a href="/about">About</a></li><li><a href="/download?file=readme.txt">Download</a></li></ul>
+[exit code: 0]

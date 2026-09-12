@@ -1,0 +1,11 @@
+.env
+config.php
+backup.sql
+config.php.bak
+index.php.old
+site.backup
+wp-admin
+phpmyadmin
+uploads/
+uploads/demo.txt
+missing-control

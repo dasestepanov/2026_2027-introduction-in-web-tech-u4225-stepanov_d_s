@@ -1,0 +1,11 @@
+about
+admin
+login
+uploads
+api
+download
+safe-download
+robots.txt
+wp-admin
+phpmyadmin
+missing-control

@@ -1,0 +1,48 @@
+$ docker compose ps
+NAME                   IMAGE                       COMMAND                  SERVICE         CREATED              STATUS              PORTS
+lab3-grafana-1         grafana/grafana:12.1.1      "/run.sh"                grafana         About a minute ago   Up About a minute   127.0.0.1:3000->3000/tcp
+lab3-node-exporter-1   prom/node-exporter:v1.9.1   "/bin/node_exporter …"   node-exporter   About a minute ago   Up About a minute   127.0.0.1:9100->9100/tcp
+lab3-prometheus-1      prom/prometheus:v3.5.0      "/bin/prometheus --c…"   prometheus      About a minute ago   Up About a minute   127.0.0.1:9090->9090/tcp
+lab3-security-site-1   python:3.12-alpine          "python server.py"       security-site   About a minute ago   Up About a minute   127.0.0.1:8083->8080/tcp
+
+[exit code: 0]
+
+$ docker network inspect lab3_monitoring --format {{json .Containers}}
+{"5d3e3905da8692575a9935831c05baf695079ceed4fd7d8c0df5f149501f6314":{"Name":"lab3-grafana-1","EndpointID":"def9ff8b948b85fcbec1431d17ac335d2905de85798da8a517c7f269c581da22","MacAddress":"ca:4a:32:75:a3:c3","IPv4Address":"172.21.0.3/16","IPv6Address":""},"859ce01fe13c19b526baf7c732d820d961d2ec55dc5d88bac987915f48223f1c":{"Name":"lab3-prometheus-1","EndpointID":"c4e40e24e9af8e4fbe3c2a7bcfcc4eb7d85f62c8b8978efd5617999c0e98dcaa","MacAddress":"a6:72:6d:34:c6:79","IPv4Address":"172.21.0.4/16","IPv6Address":""},"fef2cc8a228a8c72b1ca7fc43807851f816b0eb3d5821b1434b1bd827c8e5b5e":{"Name":"lab3-node-exporter-1","EndpointID":"a444609a9f01f27104899de9c45ae2726fcdf3fad423d17b47b90f72c4b2fbd8","MacAddress":"7e:3f:11:4b:48:86","IPv4Address":"172.21.0.2/16","IPv6Address":""}}
+
+[exit code: 0]
+
+$ docker volume inspect lab3_prometheus-data lab3_grafana-data
+[
+    {
+        "CreatedAt": "2026-09-06T10:01:49Z",
+        "Driver": "local",
+        "Labels": {
+            "com.docker.compose.config-hash": "a4c663522562361786ea0286eb846b9a76ce8f0305e24db92cc91d7b16971da4",
+            "com.docker.compose.project": "lab3",
+            "com.docker.compose.version": "5.3.0",
+            "com.docker.compose.volume": "prometheus-data"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/lab3_prometheus-data/_data",
+        "Name": "lab3_prometheus-data",
+        "Options": null,
+        "Scope": "local"
+    },
+    {
+        "CreatedAt": "2026-09-06T10:01:49Z",
+        "Driver": "local",
+        "Labels": {
+            "com.docker.compose.config-hash": "3af66930bcdbf6ed6f245bb6fa1c0ae33beb89ad0a8382f71b8e659c3d932fd9",
+            "com.docker.compose.project": "lab3",
+            "com.docker.compose.version": "5.3.0",
+            "com.docker.compose.volume": "grafana-data"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/lab3_grafana-data/_data",
+        "Name": "lab3_grafana-data",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+
+[exit code: 0]
+
