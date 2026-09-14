@@ -33,6 +33,8 @@ curl -i http://127.0.0.1:5002/
 
 ## Курсовая работа — персональный сайт на MkDocs
 
+**[Открыть сайт курсовой](https://dasestepanov.github.io/devops-lab-stepanov/)**
+
 - [Отчёт о курсовой работе](coursework/COURSEWORK.md)
 - [Проект и инструкция запуска](coursework/README.md)
 - [Исходники страниц](coursework/docs/)

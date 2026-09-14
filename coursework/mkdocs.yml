@@ -1,7 +1,7 @@
 site_name: Даниил Степанов
 site_description: Финансы, технологии и немного самоиронии. Персональный сайт Даниила Степанова.
 site_author: Даниил Степанов
-# site_url: добавьте фактический HTTPS-адрес после публикации
+site_url: https://dasestepanov.github.io/devops-lab-stepanov/
 use_directory_urls: false
 theme:
   name: material
